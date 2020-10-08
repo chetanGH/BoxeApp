@@ -1,0 +1,27 @@
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: .5em;
+    grid-column-gap: 1em;
+    
+
+    .item{
+        border:1px solid;
+        padding: 15px;
+        min-height: 100px;
+
+    }
+    .value{
+        text-align: center;
+    }
+    .item:focus { background: orange;} 
+
+    
+}  
+.selectStyle{
+    background-color: aqua;
+}
+  
+  
