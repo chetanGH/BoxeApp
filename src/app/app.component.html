@@ -319,7 +319,7 @@
     <input type="checkbox" name="toggleKeyboard" [(ngModel)]="toggleKeyboard" [checked]="toggleKeyboard" (change)="changeEvent($event)" id="keyBoard">
   </div><br>
   <div class="container">
-    <div class="item" *ngFor="let i of boxes" #box [id]="i" [value]="i" [tabindex]="i" (keydown)="submit($event)"  (click)="submit($event)">
+    <div class="item" *ngFor="let i of boxes;index as j" [ngClass]="{'zindexClass':j+1==boxes.length}" #box [id]="i" [value]="i" [tabindex]="i" (keydown)="submit($event)"  (click)="submit($event)">
       {{i}}
     </div>
   </div>

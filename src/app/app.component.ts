@@ -15,6 +15,7 @@ export class AppComponent implements OnInit{
   domEles:any;
   submit(event:any){
     let element:any = document.activeElement;
+    console.log(this.domEles)
     const elementIndex = Array.prototype.indexOf.call(this.domEles, element);
     if(this.toggleKeyboard == true){
 
@@ -33,13 +34,17 @@ export class AppComponent implements OnInit{
   
       if(event.keyCode == 40 || event.keyCode == 83){ //Down key event 
         if(element.nextElementSibling != null){
-          element.nextElementSibling.focus();
+          let value = parseInt(event.target.value) + 4;
+          let ele = document.getElementById(`${value}`)
+          ele.focus()
         } 
       }
 
       if(event.keyCode == 87 || event.keyCode == 38){
         if(element.previousElementSibling != null){
-          element.previousElementSibling.focus();
+          let value = parseInt(event.target.value) - 4;
+          let ele = document.getElementById(`${value}`)
+          ele.focus()
         } 
       }
   

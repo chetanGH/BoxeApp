@@ -3,8 +3,8 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: .5em;
-    grid-column-gap: 1em;
+    // grid-row-gap: .5em;
+    // grid-column-gap: 1em;
     
 
     .item{
@@ -17,6 +17,14 @@
         text-align: center;
     }
     :focus { background: orange;} 
+    .zindexClass{
+        z-index: 1500;
+        // color:#fff;
+        // background-color: blueviolet;
+        -webkit-box-shadow: -2px 6px 34px 16px rgba(145,227,171,1);
+        -moz-box-shadow: -2px 6px 34px 16px rgba(145,227,171,1);
+        box-shadow: -2px 6px 34px 16px rgba(145,227,171,1);
+    }
 
     
 }  
